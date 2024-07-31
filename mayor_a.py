@@ -1,3 +1,6 @@
+#Librerias
+import sys
+
 #Diccionario de meses con sus valores
 ventas = {
 "Enero": 15000,
@@ -13,3 +16,12 @@ ventas = {
 "Noviembre": 91000,
 "Diciembre": 21000,
 }
+
+buscar = int(sys.argv[1])
+
+#Realizamos el ciclo para imprimir los valores de acuerdo al umbral que necesitamos.
+mayor_a = {}
+for mes, valor in ventas.items():
+    if valor >= buscar:
+        mayor_a[mes] = valor
+print(mayor_a)
