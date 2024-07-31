@@ -11,6 +11,7 @@ password_valido = False #Definimos esta variable como false para poder comprobar
 
 #ciclo para comprobar que el contenido de la contraseña sea valido antes de realizar el hackeo
 while password_valido != True:
+    print("No debe contener mayusculas, números ni 'ñ'")
     password = getpass("Ingresa tu contraseña:").lower() #solicitamos contraseña
     password_valido = True #se define como True
     for position, elemento in enumerate(password): #Generamos este ciclo para solicitar una nueva contraseña en caso de que los caracteres no coincidan con los exigidos.
